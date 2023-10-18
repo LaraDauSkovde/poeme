@@ -1,10 +1,3 @@
-sr.reveal('.s10-rectangle-sombre',{
-	origin: 'left',
-	distance: '100%',
-	duration:2000,
-    opacity:1,
-});
-
 sr.reveal('.s10-partie-droite',{
 	origin: 'top',
 	distance: '100%',
@@ -48,13 +41,3 @@ const opacity = (delay, id) => {
 		el.style.opacity = "1"
 	})
 }
-	
-
-sr.reveal('#s10-clock-min',{
-	afterReveal: opacity(2000,'s10-clock-min'),
-});
-
-sr.reveal('#s10-clock-hours',{
-	afterReveal: opacity(3000,'s10-clock-hours'),
-});
-

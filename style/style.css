@@ -6,12 +6,12 @@
   --black: #000;
   --light-pink: #EEDFE3;
   --dark-pink: #D4B6BE;
-  --text-title: 55px;
-  --text-title-small: 45px;
-  --text-title-very-small: 30px;
-  --text-normal: 24px;
-  --text-small: 18px;
-  --text-very-small: 12px;
+  --text-title: 40px;
+  --text-title-small: 35px;
+  --text-title-very-small: 25px;
+  --text-normal: 17px;
+  --text-small: 12px;
+  --text-very-small: 8px;
   --radius-box: 10px;
   --orange-points-tab: #D07A69;
 }
