@@ -1,0 +1,235 @@
+
+/* Séparation Gauche / Droite */
+
+.s3-partie-gauche, .s3-partie-droite{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 1000px){
+	.s3-partie-gauche{
+		float: left;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+	}
+
+	.s3-partie-droite{
+		float: right;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.s3-partie-droite{
+		height: 40%;
+	}
+	.s3-partie-gauche{
+		height: 60%;
+	}
+}
+
+/* Propriétés communes a tous les cercles */
+
+.s3-cercle-bas, .s3-cercle-haut,.s3-cercle-petit-bas,.s3-poeme{
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Cercle avec le Poème */
+
+.s3-poeme{
+    /* Dimenssion du cercle */
+    background-color: var(--dark-pink);
+    width: max(71vh,37vw);
+    height: max(71vh,37vw);
+    border: min(2vh,2vw) solid var(--white);
+    /* Positionnement*/
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@media screen and (max-width: 1000px){
+	.s3-poeme{
+        border-radius: 0px 50% 50% 50%;
+        border-top: none;
+        border-left: none;
+        max-height: 100%;
+        width: 85%;
+    }
+    .s3-partie-gauche{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+	.s3-poeme{
+        border-right: none;
+        border-radius: 0px 0% 50% 50%;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 300px){
+	.s3-poeme{
+        border-radius: 0px 0% 30% 30%;
+    }
+
+}
+
+
+
+/* Texte du poème */
+
+.s3-titre{
+	font-family: 'Playfair Display', serif;
+	font-size: var(--text-title);
+	width: 100%;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.s3-description{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: var(--text-normal);
+	text-align: center;
+}
+
+.s3-description p{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1000px){
+
+	.s3-description{
+		font-size: var(--text-small);
+	}
+	.s3-titre{
+		font-size: var(--text-title-small);
+	}
+
+}
+
+@media screen and (max-width: 550px){
+
+	.s3-titre{
+		padding-bottom: 1rem;
+		font-size: var(--text-title-very-small);
+	}
+	.s3-description p{
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+}
+
+/* Cercles du milieu */
+
+.s3-cercle-haut{
+    /* Dimmenssions du cercle */
+    width: min(16vh,9vw);
+    height: min(16vh,9vw);
+    border: min(2vh,2vw) solid var(--white);
+    /* Positionnement du cercle */
+    top: 2vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.s3-cercle-bas{
+    /* Dimmenssions du cercle */
+    width: min(26vh,14vw);
+    height: min(26vh,14vw);
+    border: min(2vh,2vw) solid var(--dark-pink);
+    /* Positionnement du cercle */
+    bottom: 5vh;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.s3-cercle-petit-bas{
+    /* Dimmenssions du cercle */
+    width: min(16vh,9vw);
+    height: min(16vh,9vw);
+    border: min(2vh,2vw) solid var(--white);
+    /* Positionnement du cercle */
+    bottom: 0;
+    right: 0;
+    transform: translate(40%, 40%);
+}
+
+@media screen and (max-width: 1000px){
+    .s3-cercle-haut{
+        right: 15%;
+        left: 85%;
+        top: 4vh;
+    }
+
+    .s3-cercle-bas{
+        margin: none;
+        left: 20%;
+        right: 80%;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .s3-cercle-haut{
+        display: none;
+    }
+
+}
+
+.s3-avion,.s3-pologne{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+}
+.s3-avion{
+    width: 50%;
+    transform: translateY(70%);
+}
+
+
+.s3-carte{
+    position: relative;
+    height: 100%;
+    width: 80%;
+}
+
+@media screen and (max-width: 1000px){
+    .s3-carte{
+        width: 50%;
+        float: right;
+    }
+
+}
+
+@media screen and (max-width: 550px){
+    .s3-carte{
+        margin: none;
+        top: 0;
+
+        width: 60%;
+    }
+
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+:root{
+  --white: #FFF;
+  --black: #000;
+  --light-pink: #EEDFE3;
+  --dark-pink: #D4B6BE;
+  --text-title: 55px;
+  --text-title-small: 45px;
+  --text-title-very-small: 30px;
+  --text-normal: 24px;
+  --text-small: 18px;
+  --text-very-small: 12px;
+  --radius-box: 10px;
+  --orange-points-tab: #D07A69;
+}
+
+*, ::before, ::after{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,body {
+      scroll-snap-type: y mandatory;
+    }
+
+body{
+	background-color: var(--white);
+}
+
+.slider-block{
+	height: 100vh;
+	scroll-snap-align: center;
+	overflow: hidden;
+  position: relative;
+}
+
+.pink{
+  background-color: var(--light-pink);
+}
+
+img{
+  pointer-events: none;
+}

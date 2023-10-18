@@ -1,0 +1,184 @@
+/* Séparation Gauche / Droite */
+
+.s2-partie-gauche, .s2-partie-droite{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 1000px){
+	.s2-partie-gauche{
+		float: left;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+	}
+
+	.s2-partie-droite{
+		float: right;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.s2-partie-droite{
+		height: 40%;
+	}
+	.s2-partie-gauche{
+		height: 60%;
+	}
+}
+
+/*Partie de gauche avec l'image*/
+.s2-partie-gauche{
+	background-color: var(--white);
+	overflow: hidden;
+}
+
+.s2-partie-gauche img{
+	/*On évite que l'image ne soit coupé, on préfère qu'il y a du blanc autour*/
+	max-width: 70%;/*remplacer les max par des min si on veut que tout soit remplit*/
+	max-height: 100%;
+	/*L’image conserve son format d’image et remplit la dimension donnée. L’image sera coupée pour s’adapter*/
+	object-fit: cover;
+	/*on évite de drag l'image*/
+	pointer-events: none;
+	/*centre l'image*/
+	display: block;
+	margin: auto;
+}
+
+@media screen and (max-width: 550px){
+	.s2-partie-gauche img{
+		max-width: 100%;
+	}
+
+}
+
+
+/*Le tableau de points de la partie de droite*/
+#tableau-points{
+	position: absolute;
+	transform: translate(-25%, 60%);
+	bottom: 0px;
+	left: 0px;
+	z-index: 0;
+}
+
+.circle{
+	background-color:var(--orange-points-tab);
+	display:block;
+	height:7px;
+	width:7px;
+	border-radius:50%;
+	margin:2.5px;
+}
+
+
+@media screen and (max-width: 1700px) and (min-width: 1000px){
+
+	#tableau-points tr:nth-child(4n){
+		display: none;
+	}
+
+	#tableau-points td:nth-child(5n){
+		display: none;
+	}
+
+	.s2-poeme{
+		padding-bottom: 7rem;
+	}
+}
+
+
+@media screen and (max-width: 1000px){
+	.s2-poeme{
+		padding-bottom: 2rem;
+	}
+
+	#tableau-points{
+		transform: translate(-50%, 50%);
+		bottom: 0;
+		left: 50%;
+		z-index: 0;
+	}
+	#tableau-points tr:nth-child(-n+15){
+		display: none;
+	}
+}
+
+@media screen and (max-width: 550px){
+
+	#tableau-points td:nth-child(3n){
+		display: none;
+	}
+}
+
+/*Partie de droite avec le poème*/
+.s2-partie-droite{
+	background-color: var(red);
+}
+
+.s2-poeme{
+	position: relative;
+	background-color: var(--light-pink);
+	padding: 1rem;
+	padding-top: 2rem;
+	width: 70%;
+	z-index: 1;
+	padding-bottom: 9rem;
+}
+
+.s2-titre{
+	font-family: 'Playfair Display', serif;
+	font-size: var(--text-title);
+	width: 100%;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.s2-description{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: var(--text-normal);
+
+	text-align: center;
+}
+
+.s2-description p{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1000px){
+	.s2-poeme{
+		width: 90%;
+	}
+
+	.s2-description{
+		font-size: var(--text-small);
+	}
+	.s2-titre{
+		font-size: var(--text-title-small);
+	}
+
+}
+
+@media screen and (max-width: 550px){
+
+	.s2-titre{
+		padding-bottom: 1rem;
+		font-size: var(--text-title-very-small);
+	}
+	.s2-description p{
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+}

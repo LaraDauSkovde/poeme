@@ -1,0 +1,134 @@
+.s5-partie-haut-gauche{
+    background-color: var(--dark-pink);
+    height: 65vh;
+    width: 93vw;
+    position: absolute;
+    top: 1vh;
+    left: 0;
+    z-index: 1;
+}
+
+.s5-nuage-haut-droite{
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    width: 12vw;
+}
+
+.s5-partie-milieu{
+    z-index: 3;
+    position: absolute;
+    top: 55vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    min-width: 58vw;
+    background-color: var(--light-pink);
+    padding: 2rem;
+    border: 36px solid var(--white);
+    min-height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.s5-nuage-haut-gauche{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-70%);
+    width: 15vw;
+}
+
+.s5-nuage-bas-droite{
+    position: absolute;
+    width: 20vw;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%,50%);
+}
+
+/*Partie responsive du milieu*/
+@media screen and (max-width: 1000px){
+    .s5-partie-milieu{
+        border: 25px solid var(--white);
+        width: 80%;
+    }
+
+}
+
+#s5-tableau-lignes{
+    position: absolute;
+    z-index: 0;
+    width: 50vw;
+    height: 66vh;
+    bottom: 3vh;
+    right: 3vw;
+}
+
+@media screen and (max-width: 1000px){
+    #s5-tableau-lignes{
+        right: 1vw;
+    }
+}
+
+/* Lignes */
+#s5-tableau-lignes{
+    overflow: hidden;
+}
+
+#s5-tableau-lignes div{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: max(100vh, 100vw);
+    border-bottom: 4px solid var(--black);
+    transform: rotate(-45deg);
+    transform-origin: top left;
+}
+
+/* Texte */
+.s5-titre{
+	font-family: 'Playfair Display', serif;
+	font-size: var(--text-title);
+	width: 100%;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.s5-description{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: var(--text-normal);
+    width: 100%;
+	text-align: center;
+}
+
+.s5-description p{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+/*Partie responsive du poème*/
+@media screen and (max-width: 1300px){
+
+	.s5-description{
+		font-size: var(--text-small);
+	}
+	.s5-titre{
+		font-size: var(--text-title-small);
+	}
+
+}
+
+@media screen and (max-width: 1000px){
+
+	.s5-titre{
+		padding-bottom: 1rem;
+		font-size: var(--text-title-very-small);
+	}
+	.s5-description p{
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+}

@@ -1,0 +1,97 @@
+.s8{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/*La partie du poème dans le fond rose claire*/
+.s8-haut{
+	width: 85%;
+	height: 75%;
+	border-radius: 45px;
+	margin: 0 auto;
+	background-color: var(--light-pink);
+	padding:  1rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.s8-titre{
+	font-family: 'Playfair Display', serif;
+	font-size: var(--text-title);
+	width: 100%;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.s8-description{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: var(--text-normal);
+
+	text-align: center;
+}
+
+.s8-description p{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+/*Partie responsive du poème*/
+@media screen and (max-width: 1300px){
+	.s8-poeme{
+		width: 90%;
+	}
+
+	.s8-description{
+		font-size: var(--text-small);
+	}
+	.s8-titre{
+		font-size: var(--text-title-small);
+	}
+
+}
+
+@media screen and (max-width: 1000px){
+
+	.s8-titre{
+		padding-bottom: 1rem;
+		font-size: var(--text-title-very-small);
+	}
+	.s8-description p{
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+}
+
+/*PS & JTM */
+.s8-bas{
+	width: 75%;
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 2rem;
+}
+
+.s8-ps{
+	font-size: var(--text-normal);
+}
+
+@media screen and (max-width: 1300px){
+	.s8-haut{
+		height: 75%;
+	}
+
+	.s8-ps{
+		font-size: var(--text-small);
+	}
+
+	.s8-jtm{
+		font-size: 24px;
+	}
+
+}

@@ -1,0 +1,140 @@
+/* Section 1 : Offre d'emploi avec la description et l'image de Barbara*/
+
+/* Version téléphone :
+On mets les div l'une en dessous de l'autre pour que cela prenne 100% de l'écran*/
+.s1-partie-gauche, .s1-partie-droite{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	height: 50%;
+}
+
+/*Font de la partie gauche en rose*/
+.s1-partie-gauche{
+	background-color: var(--light-pink);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+/*Carte de la partie de gauche*/
+.s1-offre{
+	background-color: var(--dark-pink);
+	border-radius: var(--radius-box);
+	width: 65%;
+	padding: 4rem;
+}
+
+/*Titre de la carte*/
+.s1-titre{
+	font-family: 'Playfair Display', serif;
+	font-size: var(--text-title);
+	width: 100%;
+
+	padding-bottom: 2rem;
+	border-bottom: 4px solid var(--white);
+}
+
+/*Description de la carte*/
+.s1-description{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: var(--text-normal);
+
+	text-align: justify;
+
+}
+
+/*Espacement entre les lignes de la description de la carte*/
+.s1-description p{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+/*Responsive de la partie de gauche*/
+@media screen and (max-width: 1300px){
+	.s1-offre{
+		padding: 2rem;
+	}
+
+}
+
+@media screen and (max-width: 1100px){
+	.s1-offre{
+		width: 90%;
+	}
+
+	.s1-description{
+		font-size: var(--text-small);
+	}
+	.s1-titre{
+		font-size: var(--text-title-small);
+	}
+
+}
+
+@media screen and (max-width: 550px){
+
+	.s1-partie-gauche{
+		height: 60%;
+	}
+	.s1-partie-droite{
+		height: 40%;
+	}
+
+	.s1-titre{
+		padding-bottom: 1rem;
+		font-size: var(--text-title-very-small);
+	}
+	.s1-description p{
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+}
+
+
+/*Partie droite de couleur blanche en désactivant le scroll*/
+.s1-partie-droite{
+	background-color: var(--white);
+	overflow: hidden;
+	/*Centre le contenu de la div verticallement*/
+	display: flex;
+	justify-content: center;
+}
+
+/*L'image de barbara*/
+.s1-partie-droite img{
+	/*On évite que l'image ne soit coupé, on préfère qu'il y a du blanc autour*/
+	max-width: 100%;/*remplacer les max par des min si on veut que tout soit remplit*/
+	max-height: 100%;
+	/*L’image conserve son format d’image et remplit la dimension donnée. L’image sera coupée pour s’adapter*/
+	object-fit: cover;
+	/*on évite de drag l'image*/
+	pointer-events: none;
+	/*centre l'image*/
+	display: block;
+	margin: auto;
+}
+
+/*Responsive de la partie de droite*/
+/*Si sur écran large (PC) : ratio 45/55*/
+@media screen and (min-width: 1000px){
+	/*On mets la description de l'offre à gauche*/
+	.s1-partie-gauche{
+		float: left;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 45%;
+	}
+
+	/*On mets l'image de barbara à droite*/
+	.s1-partie-droite{
+		float: right;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 55%;
+	}
+}

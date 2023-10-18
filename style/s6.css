@@ -1,0 +1,118 @@
+/*Partie gauche et droite : alignement Horizontal/vertical*/
+.s6-partie-gauche, .s6-partie-droite{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (min-width: 1000px){
+	.s6-partie-gauche{
+		float: left;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+	}
+
+	.s6-partie-droite{
+		float: right;
+		right: 0;
+		top: 0;
+		height: 100%;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.s6-partie-droite{
+		height: 40%;
+	}
+	.s6-partie-gauche{
+		height: 60%;
+	}
+}
+
+
+/*Partie de gauche avec le poème*/
+
+.s6-poeme{
+	position: relative;
+	width: 70%;
+	z-index: 1;
+}
+
+.s6-titre{
+	font-family: 'Playfair Display', serif;
+	font-size: var(--text-title);
+	width: 100%;
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.s6-description{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: var(--text-normal);
+
+	text-align: center;
+}
+
+.s6-description p{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1000px){
+	.s6-poeme{
+		width: 90%;
+	}
+
+	.s6-description{
+		font-size: var(--text-small);
+	}
+	.s6-titre{
+		font-size: var(--text-title-small);
+	}
+
+}
+
+@media screen and (max-width: 550px){
+
+	.s6-titre{
+		padding-bottom: 1rem;
+		font-size: var(--text-title-very-small);
+	}
+	.s6-description p{
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+}
+
+/*Partie de droite avec l'image*/
+.s6-partie-droite{
+	background-color: var(--white);
+	overflow: hidden;
+}
+
+.s6-partie-droite img{
+	max-height: 100%;
+	/*L’image conserve son format d’image et remplit la dimension donnée. L’image sera coupée pour s’adapter*/
+	object-fit: cover;
+}
+
+.s6-wind{
+    max-width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.s6-cercles{
+    max-width: 100%;/*remplacer les max par des min si on veut que tout soit remplit*/
+	/*centre l'image*/
+	display: block;
+	margin: auto;
+}
